@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+
+$pink: hsl(322, 100%, 66%);
+$very-pale-cyan: hsl(193, 100%, 96%);
+$very-dark-cyan: hsl(192, 100%, 9%);
+$grayish-blue: hsl(208, 11%, 55%);
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1,
+h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 7vw;
+}
+
+p {
+    font-size: 4.2vw;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: 1s ease-out 0s 1 slideInFromAbove;
+    padding: 5%;
+}
+
+.top-logo {
+    width: 40%;
+    height: 40%;
+    padding: 5%;
+}
+
+@keyframes slideInFromAbove {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.intro {
+    background-image: url("/images/bg-hero-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $very-pale-cyan;
+    padding-bottom: 2%;
+}
+
+.try-button button {
+    cursor: pointer;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 2.5vw;
+    border: none;
+    padding: 8% 5%;
+    width: 10em;
+    border-radius: 10rem;
+    box-shadow: 0 0.5rem 0.7rem rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        color: #fff;
+        background-color: $pink;
+        box-shadow: 0 0.5rem 0.7rem rgba(0, 0, 0, 0.3);
+        @include transition(background-color 2s ease);
+    }
+}
+
+.introduction {
+    margin-bottom: 15%;
+
+    button {
+        cursor: pointer;
+        background-color: #ff52bf;
+        color: #fff;
+        font-size: 3vw;
+        border: none;
+        height: 100%;
+        width: 75%;
+        border-radius: 10rem;
+        padding: 4%;
+
+        &:hover {
+            background-color: hsl(204, 100, 49);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+            @include transition(background-color 2s ease);
+
+        }
+    }
+}
+
+.build {
+    margin: 10%;
+    @include transition(all 2s ease);
+}
+
+.content {
+    margin: 15% 0 60%;
+
+    img {
+        padding: 5%;
+    }
+}
+
+section {
+    margin: 10% 6%;
+    padding: 10% 10% 5%;
+    box-shadow: 0 0 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+
+    h2 {
+        font-size: 5.5vw;
+    }
+
+    p {
+        color: $grayish-blue;
+        font-size: 3.6vw;
+    }
+}
+
+footer {
+    background-color: $very-dark-cyan;
+    position: relative;
+    padding-top: 35%;
+    color: #fff;
+    text-align: left;
+    padding-left: 5%;
+
+    img {
+        filter: brightness(0) invert(1);
+    }
+}
+
+.ready {
+    position: absolute;
+    color: #000;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    left: 0;
+    right: 0;
+    margin: 5%;
+    top: -17%;
+    padding: 10% 0;
+
+    h1 {
+        font-size: 4.5vw;
+        padding-bottom: 5%;
+    }
+
+    button {
+        background-color: $pink;
+        cursor: pointer;
+        color: #fff;
+        font-weight: bold;
+        font-size: 3vw;
+        border: none;
+        height: 100%;
+        width: 55%;
+        padding: 4%;
+        border-radius: 5rem;
+        box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+
+        &:hover {
+            background-color: hsl(204, 100, 49);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+            @include transition(background-color 2s ease);
+
+        }
+    }
+}
+
+.footer-logo {
+    margin-bottom: 10%;
+
+    img {
+        width: 50%;
+    }
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item {
+    display: flex;
+    margin-bottom: 5%;
+
+    p {
+        width: 80%;
+        margin: 0;
+        padding-left: 5%;
+    }
+}
+
+.contact-image {
+    width: 1.2em;
+    height: 1.2em;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    font-size: 4vw;
+
+    a {
+        margin: 3% 0;
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.links-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icons {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.fab {
+    cursor: pointer;
+    border: 1px solid #fff;
+    font-size: 3.5vw;
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0.5rem;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.copywright {
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .links {
+        flex-direction: row;
+    }
+
+    .links-group {
+        padding-right: 10%;
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    h1 {
+        font-size: 3vw;
+    }
+
+    p {
+        font-size: 1.3vw;
+    }
+
+    header {
+        padding: 5%;
+    }
+
+    .top-logo {
+        padding: 0;
+        width: 15rem;
+    }
+
+    .intro {
+        background-image: url("/images/bg-hero-desktop.svg");
+    }
+
+    .try-button button {
+        font-size: 1.2vw;
+        padding: 7% 8%;
+        width: 15em;
+        border-radius: 10rem;
+    }
+
+    .build {
+        display: flex;
+        justify-content: flex-start;
+        text-align: left;
+        margin: 0 5%;
+        @include transition(all 2s ease);
+    }
+
+    .introduction {
+        width: 45%;
+        padding: 4% 4% 0 0;
+
+        button {
+
+            font-size: 1vw;
+            height: 100%;
+            width: 60%;
+            border-radius: 10rem;
+            padding: 4%;
+            margin-top: 3%;
+        }
+    }
+
+    .introduction-image {
+        width: 55%;
+    }
+
+    .content {
+        margin: 10% 0 25%;
+    }
+
+    section {
+        display: flex;
+        align-items: center;
+        margin: 3% 6%;
+        padding: 4%;
+
+
+        h2 {
+            font-size: 1.8vw;
+        }
+
+        p {
+            font-size: 1.3vw;
+        }
+    }
+
+    .grow,
+    .your-users {
+        flex-direction: row-reverse;
+    }
+
+    .content-text {
+        width: 60%;
+        text-align: left;
+        padding: 0 8%;
+    }
+
+    .content-image {
+        width: 40%;
+
+    }
+
+    .ready {
+        border-radius: 1rem;
+        margin: 0% 20%;
+        top: -30%;
+        padding: 4%;
+
+        h1 {
+            font-size: 2.5vw;
+            padding-bottom: 5%;
+        }
+
+        button {
+            font-size: 1.5vw;
+            height: 100%;
+            width: 60%;
+
+
+        }
+    }
+
+    footer {
+
+        padding-top: 15%;
+        padding-left: 5%;
+
+    }
+
+    .footer-logo {
+        margin-bottom: 5%;
+
+        img {
+            width: 20%;
+        }
+    }
+
+    .contact-information {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .links {
+        justify-content: space-between;
+        margin-top: 1.5rem;
+        font-size: 1.5vw;
+        width: 33%;
+        line-height: 2em;
+        padding: 0;
+        margin: 0;
+
+        a {
+            margin: 3% 0;
+
+        }
+    }
+
+    .contact {
+        width: 33%;
+    }
+
+    .social-icons {
+        padding: 0;
+        margin: 0 10%;
+        align-items: flex-start;
+
+    }
+
+    .fab {
+        font-size: 1vw;
+    }
+
+    .copywright {
+        font-size: 0.8vw;
+        text-align: right;
+        margin-right: 3%;
+    }
+}
