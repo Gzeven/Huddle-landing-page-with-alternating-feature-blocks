@@ -1,21 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
   display: flex;
   flex-direction: column;
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
   justify-content: center;
-  margin: 0;
-  min-height: 100vh;
-  padding: 0;
+  align-items: center;
   text-align: center;
-  width: 100%;
 }
 
 h1,
@@ -29,129 +28,119 @@ p {
 }
 
 img {
-  height: auto;
   max-width: 100%;
+  height: auto;
 }
 
 header {
-  align-items: center;
-  animation: 1s ease-out 0s 1 slideInFromAbove;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  animation: 1s ease-out 0s 1 slideInFromAbove;
   padding: 5%;
 }
 
 .top-logo {
+  width: 40%;
   height: 40%;
   padding: 5%;
-  width: 40%;
 }
 
 @keyframes slideInFromAbove {
   0% {
     transform: translateY(-100%);
   }
-
   100% {
     transform: translateX(0);
   }
 }
-
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
   }
-
   100% {
     transform: translateX(0);
   }
 }
-
 .intro {
-  background-color: #ebfbff;
   background-image: url("/images/bg-hero-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #ebfbff;
   padding-bottom: 2%;
 }
 
 .try-button button {
-  background-color: #fff;
-  border: none;
-  border-radius: 10rem;
-  box-shadow: 0 0.5rem 0.7rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  font-size: 2.5vw;
+  background-color: #fff;
   font-weight: bold;
+  font-size: 2.5vw;
+  border: none;
   padding: 8% 5%;
   width: 10em;
+  border-radius: 10rem;
+  box-shadow: 0 0.5rem 0.7rem rgba(0, 0, 0, 0.1);
 }
-
 .try-button button:hover {
+  color: #fff;
   background-color: #ff52bf;
   box-shadow: 0 0.5rem 0.7rem rgba(0, 0, 0, 0.3);
-  color: #fff;
+  -webkit-transition: background-color 2s ease;
   -moz-transition: background-color 2s ease;
   -ms-transition: background-color 2s ease;
   -o-transition: background-color 2s ease;
   transition: background-color 2s ease;
-  -webkit-transition: background-color 2s ease;
 }
 
 .introduction {
   margin-bottom: 15%;
 }
-
 .introduction button {
-  background-color: #ff52bf;
-  border: none;
-  border-radius: 10rem;
-  color: #fff;
   cursor: pointer;
+  background-color: #ff52bf;
+  color: #fff;
   font-size: 3vw;
+  border: none;
   height: 100%;
-  padding: 4%;
   width: 75%;
+  border-radius: 10rem;
+  padding: 4%;
 }
-
 .introduction button:hover {
   background-color: #0096fa;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  -webkit-transition: background-color 2s ease;
   -moz-transition: background-color 2s ease;
   -ms-transition: background-color 2s ease;
   -o-transition: background-color 2s ease;
   transition: background-color 2s ease;
-  -webkit-transition: background-color 2s ease;
 }
 
 .build {
   margin: 10%;
+  -webkit-transition: all 2s ease;
   -moz-transition: all 2s ease;
   -ms-transition: all 2s ease;
   -o-transition: all 2s ease;
   transition: all 2s ease;
-  -webkit-transition: all 2s ease;
 }
 
 .content {
   margin: 15% 0 60%;
 }
-
 .content img {
   padding: 5%;
 }
 
 section {
-  border-radius: 1rem;
-  box-shadow: 0 0 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
   margin: 10% 6%;
   padding: 10% 10% 5%;
+  box-shadow: 0 0 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
 }
-
 section h2 {
   font-size: 5.5vw;
 }
-
 section p {
   color: #808d99;
   font-size: 3.6vw;
@@ -159,64 +148,59 @@ section p {
 
 footer {
   background-color: #00252e;
-  color: #fff;
-  padding-left: 5%;
-  padding-top: 35%;
   position: relative;
+  padding-top: 35%;
+  color: #fff;
   text-align: left;
+  padding-left: 5%;
 }
-
 footer img {
   filter: brightness(0) invert(1);
 }
 
 .ready {
-  background-color: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 0 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
-  color: #000;
-  left: 0;
-  margin: 5%;
-  padding: 10% 0;
   position: absolute;
-  right: 0;
+  color: #000;
   text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  left: 0;
+  right: 0;
+  margin: 5%;
   top: -17%;
+  padding: 10% 0;
 }
-
 .ready h1 {
   font-size: 4.5vw;
   padding-bottom: 5%;
 }
-
 .ready button {
   background-color: #ff52bf;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  font-size: 3vw;
   border: none;
+  height: 100%;
+  width: 55%;
+  padding: 4%;
   border-radius: 5rem;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
-  color: #fff;
-  cursor: pointer;
-  font-size: 3vw;
-  font-weight: bold;
-  height: 100%;
-  padding: 4%;
-  width: 55%;
 }
-
 .ready button:hover {
   background-color: #0096fa;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  -webkit-transition: background-color 2s ease;
   -moz-transition: background-color 2s ease;
   -ms-transition: background-color 2s ease;
   -o-transition: background-color 2s ease;
   transition: background-color 2s ease;
-  -webkit-transition: background-color 2s ease;
 }
 
 .footer-logo {
   margin-bottom: 10%;
 }
-
 .footer-logo img {
   width: 50%;
 }
@@ -230,36 +214,32 @@ footer img {
   display: flex;
   margin-bottom: 5%;
 }
-
 .contact-item p {
+  width: 80%;
   margin: 0;
   padding-left: 5%;
-  width: 80%;
 }
 
 .contact-image {
-  height: 1.2em;
   width: 1.2em;
+  height: 1.2em;
 }
-
 .contact-image img {
-  height: auto;
   width: 100%;
+  height: auto;
 }
 
 .links {
   display: flex;
   flex-direction: column;
-  font-size: 4vw;
   margin-top: 1.5rem;
+  font-size: 4vw;
 }
-
 .links a {
-  color: #fff;
   margin: 3% 0;
+  color: #fff;
   text-decoration: none;
 }
-
 .links a:hover {
   text-decoration: underline;
 }
@@ -270,41 +250,39 @@ footer img {
 }
 
 .social-icons {
-  align-items: center;
+  text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 2.5rem;
-  text-align: center;
 }
 
 .fab {
-  align-items: center;
-  border: 1px solid #fff;
-  border-radius: 50%;
   cursor: pointer;
-  display: flex;
+  border: 1px solid #fff;
   font-size: 3.5vw;
-  height: 2.5em;
-  justify-content: center;
-  margin: 0.5rem;
   width: 2.5em;
+  height: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0.5rem;
 }
-
 .fab:hover {
   transform: scale(1.1);
 }
 
 .copywright {
   font-size: 3vw;
-  margin-top: 5%;
   text-align: center;
+  margin-top: 5%;
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
 }
-
 .attribution a {
   color: #3e52a3;
 }
@@ -318,7 +296,6 @@ footer img {
     padding-right: 10%;
   }
 }
-
 @media only screen and (min-width: 1050px) {
   h1 {
     font-size: 3vw;
@@ -342,36 +319,35 @@ footer img {
   }
 
   .try-button button {
-    border-radius: 10rem;
     font-size: 1.2vw;
     padding: 7% 8%;
     width: 15em;
+    border-radius: 10rem;
   }
 
   .build {
     display: flex;
     justify-content: flex-start;
+    text-align: left;
     margin: 0 5%;
+    -webkit-transition: all 2s ease;
     -moz-transition: all 2s ease;
     -ms-transition: all 2s ease;
     -o-transition: all 2s ease;
-    text-align: left;
     transition: all 2s ease;
-    -webkit-transition: all 2s ease;
   }
 
   .introduction {
-    padding: 4% 4% 0 0;
     width: 45%;
+    padding: 4% 4% 0 0;
   }
-
   .introduction button {
-    border-radius: 10rem;
     font-size: 1vw;
     height: 100%;
-    margin-top: 3%;
-    padding: 4%;
     width: 60%;
+    border-radius: 10rem;
+    padding: 4%;
+    margin-top: 3%;
   }
 
   .introduction-image {
@@ -383,29 +359,27 @@ footer img {
   }
 
   section {
-    align-items: center;
     display: flex;
+    align-items: center;
     margin: 3% 6%;
     padding: 4%;
   }
-
   section h2 {
     font-size: 1.8vw;
   }
-
   section p {
     font-size: 1.3vw;
   }
 
   .grow,
-  .your-users {
+.your-users {
     flex-direction: row-reverse;
   }
 
   .content-text {
-    padding: 0 8%;
-    text-align: left;
     width: 60%;
+    text-align: left;
+    padding: 0 8%;
   }
 
   .content-image {
@@ -415,15 +389,13 @@ footer img {
   .ready {
     border-radius: 1rem;
     margin: 0% 20%;
-    padding: 4%;
     top: -30%;
+    padding: 4%;
   }
-
   .ready h1 {
     font-size: 2.5vw;
     padding-bottom: 5%;
   }
-
   .ready button {
     font-size: 1.5vw;
     height: 100%;
@@ -431,14 +403,13 @@ footer img {
   }
 
   footer {
-    padding-left: 5%;
     padding-top: 15%;
+    padding-left: 5%;
   }
 
   .footer-logo {
     margin-bottom: 5%;
   }
-
   .footer-logo img {
     width: 20%;
   }
@@ -449,17 +420,15 @@ footer img {
   }
 
   .links {
-    font-size: 1.5vw;
     justify-content: space-between;
-    line-height: 2em;
-    margin: 0;
     margin-top: 1.5rem;
-    padding: 0;
+    font-size: 1.5vw;
     width: 33%;
+    padding: 0;
+    margin: 0;
   }
-
   .links a {
-    margin: 3% 0;
+    margin-bottom: 15%;
   }
 
   .contact {
@@ -467,9 +436,9 @@ footer img {
   }
 
   .social-icons {
-    align-items: flex-start;
-    margin: 0 10%;
     padding: 0;
+    margin: 0 10%;
+    align-items: flex-start;
   }
 
   .fab {
@@ -478,8 +447,8 @@ footer img {
 
   .copywright {
     font-size: 0.8vw;
-    margin-right: 3%;
     text-align: right;
+    margin-right: 3%;
   }
 }
 
